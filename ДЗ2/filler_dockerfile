@@ -1,0 +1,4 @@
+FROM mariadb
+COPY filler.sh /filler.sh
+RUN chmod +x /filler.sh
+CMD ["/filler.sh"]

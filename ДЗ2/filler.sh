@@ -1,0 +1,5 @@
+mariadb --user=user --password=password --host=db -e "CREATE DATABASE tpos_database;"
+mariadb --user=user --password=password --host=db -e "USE tpos_database;CREATE TABLE  data (name VARCHAR(255), age INT);"
+mariadb --user=user --password=password --host=db -e "USE data;LOAD DATA LOCAL INFILE \"data.csv\" INTO TABLE data COLUMNS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 LINES;"
+mariadb --user=user --password=password --host=db -e "SHOW DATABASES;"
+mariadb --user=user --password=password --host=db -e "SELECT * FROM data.data;"

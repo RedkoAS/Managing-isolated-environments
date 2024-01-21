@@ -1,0 +1,6 @@
+FROM python:3.8
+RUN pip install mariadb
+RUN pip install Flask
+EXPOSE 8000
+COPY web.py /web.py
+CMD flask --app web --debug run --port 8000 --host 0.0.0.0
